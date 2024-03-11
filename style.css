@@ -27,9 +27,6 @@
     margin-left: 50px;
 }
 
-.output {
-    color: antiquewhite;
-}
 h2 {
     margin-left: 10px;
 }
@@ -47,4 +44,7 @@ h3 {
 
 code {
     word-wrap: break-word;
+}
+.output > span {
+    color: white !important;
 }

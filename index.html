@@ -19,34 +19,326 @@
 
         <div id="py1">
             <h2>Python Basics</h2>
+            <h3>Input</h3>
+            <ul>
+                <li>
+                    Make sure a variable is set to receive and store the user
+                    input
+                </li>
+                <li>
+                    Use "\n" to make sure the input is only accepted in the next
+                    line.
+                </li>
+                <pre>
+<code>x = input("What is your name?\n")
+    print(f"Hello {x}")
+</code></pre>
+                <pre>
+<code class="output"># Output
+What is your name?          #This is the input method
+Lilly                       #This is the user-input response
+Hello Lilly                 #This is the response printed out
+</code>
+</pre>
+            </ul>
+            <h3>String Formatting</h3>
+            <ul>
+                <li>Using an F-String</li>
+                <pre>
+<code>aName = "Ruby"
+age = 19
+owing = 25
+print(f"Hello {aName}, you are {age} years old. You owe ${owing:.2f}")
+</code></pre>
+                <pre>
+<code class="output"># Output
+Hello Ruby, you are 19 years old. You owe $25.00</code></pre>
+                <li>Using format()</li>
+                <pre>
+<code>bName = "Cassy"
+age = 30
+owing = 36.45128
+greeting = "Hello {}, you are {} years old. You owe ${:.2f}"
+print(greeting.format(bName, age, owing))</code></pre>
+                <pre>
+<code class="output"># Output:
+Hello Cassy, you are 30 years old. You owe $36.45</code></pre>
+            </ul>
+            <h3>Collections</h3>
+            <ul>
+                <li>Lists - [Square Brackets]</li>
+                <ul>
+                    <li>Ordered</li>
+                    <li>
+                        Changeable : items within can be changed, added, removed
+                    </li>
+                    <li>Indexed</li>
+                    <li>
+                        Can have duplicates, because items are stored by index.
+                    </li>
+                    <li>
+                        Can store String("anything within single/double
+                        quotations"), int(Integers/Floats), and
+                        Boolean(True/False) data types
+                    </li>
+                </ul>
+                <pre>
+<code>x = [1.912, "Tim", True]
+    for i in range(len(x)):
+        print(f"At index {i}: {x[i]}, is of type {type(x[i])}")</code></pre>
+                <pre>
+<code class="output"># Output:
+At index 0: 1.912, is of type &lt;class 'int'&gt;
+At index 1: Tim, is of type &lt;class 'str'&gt;
+At index 2: True, is of type &lt;class 'bool'&gt;</code></pre>
+                <li>Tuples - (Round Brackets)</li>
+                <ul>
+                    <li>Ordered</li>
+                    <li>Unchangeable</li>
+                    <li>Indexed</li>
+                    <li>Can have duplicates</li>
+                    <li>
+                        Can store String("anything within single/double
+                        quotations"), int(Integers/Floats), and
+                        Boolean(True/False) data types
+                    </li>
+                </ul>
+                <pre>
+<code>y = (2.358, "Robby", False)
+    for i in range(len(y)):
+print(f"At index {i}: {y[i]}, is of type {type(y[i])}")</code></pre>
+                <pre>
+<code class="output"># Output:
+At index 0: 2.358, is of type &lt;class 'float'&gt;
+At index 1: Robby, is of type &lt;class 'str'&gt;
+At index 2: False, is of type &lt;class 'bool'&gt;
+</code>
+</pre>
+                <li>Dictionaries - {Curly Brackets}</li>
+                <ul>
+                    <li>Ordered</li>
+                    <li>Changeable</li>
+                    <li>Duplicates are NOT allowed</li>
+                    <li>Contain keys and values</li>
+                </ul>
+                <pre>
+<code>
+zDict = {
+    1: 0.253,
+    "two": 693,
+    3: "five",
+    "fruits": ["apples", "bananas", "oranges"],
+    "grades": {
+        "English": 97,
+        "Math": 85,
+        "French": 99,
+    },
+}
 
+for key, value in zDict.items():
+    print(f"key is {key} : value is {value}")</code></pre>
+                <pre>
+<code class="output"># Output: 
+    key is 1 : value is 0.253
+    key is two : value is 693
+    key is 3 : value is five
+    key is fruits : value is ['apples', 'bananas', 'oranges']
+    key is grades : value is {'English': 97, 'Math': 85, 'French': 99}
+</code></pre>
+                <ul>
+                    <li>Accessing items in a dictionary</li>
+                    <pre>
+<code>a = zDict[1]
+b = zDict["two"]
+c = zDict["fruits"][2]
+</code>
+</pre>
+                </ul>
+            </ul>
             <h3>Printing</h3>
-            <pre><code>
-hello = "Hello"
-    print(hello)
-            </code></pre>
-            <pre><code># Output:
+            <ul>
+                <li>Basic Printing</li>
+                <pre>
+<code>hello = "Hello"
+    print(hello)</code></pre>
+                <pre><code class="output"># Output:
 hello</code></pre>
+                <li>F String Printing</li>
+                <ul>
+                    <li>Allows the printing of expressions within a string.</li>
+                    <li>Used instead of string concatenation</li>
+                </ul>
+                <pre>
+<code>name = "Jane"
+print(f"Hello {name}")
+    </code></pre>
+                <pre><code class="output"># Output:
+Hello Jane</code></pre>
+                <ul>
+                    <li>F String Formatting</li>
+                    <ul>
+                        <li>2 Decimal Places</li>
+                    </ul>
+                    <pre>
+<code>num1 = 1269
+num2 = 0.57286
+
+
+def multiply(a, b):
+    return a * b
+
+
+print(f"{multiply(num1, num2):.2f}")</code></pre>
+                    <pre><code class="output"># Output
+726.96</code></pre>
+                </ul>
+            </ul>
+
+            <h3>Comments</h3>
+            <ul>
+                <li>Simple Comment</li>
+                <pre>
+<code># Comment</code></pre>
+                <li>Inline Comment</li>
+                <pre>
+<code>class Person:
+    def __init__(self, fname, lname, age):
+        self.fname = fname
+        self.lname = lname
+        self.age = age
+
+    def intro(self):
+        print(f"My name is {self.fname}")  # Prints name of Person</code></pre>
+                <li>Multiline Comment</li>
+                <ul>
+                    <li>Using "#" on every line</li>
+                </ul>
+                <pre>
+<code># def multiply(a, b):
+#     return a * b
+#
+#
+# print(f"{multiply(num1, num2):.2f}")</code></pre>
+                <ul>
+                    <li>Using """ at the beginning and end</li>
+                </ul>
+                <pre>
+<code>"""This
+is
+a
+multiline
+comment
+"""</code></pre>
+                <pre>
+<code class="output"># Output:
+This
+is
+a
+multiline
+comment</code></pre>
+            </ul>
+
             <h3>Functions</h3>
-            <pre><code>
-def add(a1, b1):
-    return a1 + b1
+            <ul>
+                <li>Basic Function</li>
+                <pre>
+<code>def greet():
+    print("Hello World!")
+</code></pre>
+                <li>Calling a Function</li>
+                <pre>
+<code>greet()</code></pre>
+                <li>Function with Arguments</li>
+                <pre>
+<code>def add(a, b):
+    return a + b
 
 print(add(2, 3))</code></pre>
-            <pre><code># Output:
+                <pre>
+<code># Output
 5</code></pre>
+                <pre>
+<code>def add(a1, b1):
+    result = a1 + b1
+    print(result)
 
-            <pre><code>
-def printA(a2):
-    print(f"a: {a2}")
+add(2, 3)</code></pre>
+                <pre><code># Output:
+5</code></pre>
+                <ul>
+                    <li>Default Arguments</li>
+                    <ul>
+                        <li>
+                            If no explicit values are passed, the default values
+                            will be used.
+                        </li>
+                    </ul>
+                    <pre>
+<code>def sayHello(a, b="Portia"):
+    print(f"Hello {a} & {b}")
 
-printA("I am A")
-    </code></pre>
-            <pre><code class="output"># Output:
-a: I am AS</code></pre>
+sayHello("Tom", "Jerry")
+sayHello("Ellen")</code></pre>
+                    <pre>
+<code class="output"># Output:
+Hello Tom & Jerry
+Hello Ellen & Portia</code></pre>
+                    <li>*args</li>
+                    <ul>
+                        <li>
+                            Allows a function to accept any number of arguments
+                        </li>
+                    </ul>
+                    <pre>
+<code>def addNums (*num):
+return sum(num)
+
+print(addNums(1, 2, 3, 4, 5))</code></pre>
+                    <pre>
+<code class="output"># Output:
+15</code></pre>
+                    <li>*kwargs</li>
+                    <ul>
+                        <li>
+                            Allows a function to accept any number of keyword
+                            arguments
+                        </li>
+                    </ul>
+                    <pre>
+<code>def greet(*fnames):
+print (f"Hello {fnames}")
+
+greet("Jane", "July", "Tom")</code></pre>
+                    <pre>
+<code class="output"># Output:
+Hello ('Jane', 'July', 'Tom')</code></pre>
+                    <pre>
+<code>def greet(*fnames):
+for i in range(len(fnames)):
+print(f"Hello {fnames[i]}")
+
+greet("Jane", "July", "Tom")</code></pre>
+                    <pre>
+<code class="output"># Output:
+Hello Jane
+Hello July
+Hello Tom</code></pre>
+                </ul>
+
+                <li>Pass Statement</li>
+                <ul>
+                    <li>Used as a placeholder for future code.</li>
+                    <li>If called, will execute with no issues.</li>
+                </ul>
+                <pre>
+<code>def multiply(a, b):
+    pass</code></pre>
+            </ul>
             <h3>Conditional Statements</h3>
-            <pre><code>
-a3 = ""
+            <ul>
+                <li>If ... Else</li>
+                <pre>
+<code>a3 = ""
 b3 = 5
 if (a3 == a3 and b3 == 5):
     print(f"a is defined, b is defined")
@@ -57,17 +349,39 @@ elif (a3 == 3 and b3 != 5):
 else:
     print(f"a and b are not defined")
             </code></pre>
-            <pre><code># Output:
+                <pre><code># Output:
 a is defined, b is defined</code></pre>
-            <h3>For Loops</h3>
-            <pre><code>
-sumTotal = 0
+                <li>Switch Statement - Match & Case</li>
+                <pre>
+<code>q = input("What is your fave fruit?\n")
+match q:
+    case "apple":
+        print("You need to eat this once a day")
+    case "banana":
+        print("This shit is bananas. B A N A N A S!")
+    case "kiwi":
+        print("Do you know the haka?")
+    case "strawberry":
+        print("Valentines day is calling you.")
+    case _:
+        print("AH! Fruits are just sugar bombs anyway!")</code></pre>
+                <pre>
+<code class="output"># Output:
+What is your fave fruit?                    #This was asked by the program
+banana                                      #This was the user typed response
+This shit is bananas. B A N A N A S!        #This was the output</code></pre>
+            </ul>
+
+            <h3>Loops</h3>
+            <ul>
+                <li>For Loops</li>
+                <pre>
+<code>sumTotal = 0
 for i in range(5):
     sumTotal += i
     print(i)
-    print(f"sum is: {sumTotal}")
-            </code></pre>
-            <pre><code># Output:
+    print(f"sum is: {sumTotal}")</code></pre>
+                <pre><code># Output:
 0
 sum is: 0
 1
@@ -78,83 +392,79 @@ sum is: 3
 sum is: 6
 4
 sum is: 10</code></pre>
-            <h3>For Loop - Decreasing</h3>
-            <pre><code>
-for i in range(5, 0, -1):
-    print(i)
-            </code></pre>
-            <pre><code># Output:
+                <ul>
+                    <li>For Loop - Decreasing</li>
+                    <pre>
+<code>for i in range(5, 0, -1):
+    print(i)</code></pre>
+                    <pre><code># Output:
 5
 4
 3
 2
 1</code></pre>
-            <h3>For Loop - Increasing</h3>
-            <pre><code>
-for i in range(0, 5, 1):
-    print(i)
-            </code></pre>
-            <pre><code># Output:
+
+                    <li>For Loop - Increasing</li>
+                    <pre>
+<code>for i in range(0, 5, 1):
+    print(i)            </code></pre>
+                    <pre><code># Output:
 0
 1
 2
 3
 4
 </code></pre>
-            <h3>Creating Objects - Object Literal</h3>
-            <pre><code>
-class Person:
-    name = ""
-    pets = {}
-    bankBalanace = 0
-    faveMeal = ""
+                </ul>
+                <li>While Loop</li>
+                <pre>
+<code>num = 5
+    while num > 0:
+        print(num)
+        num -= 1</code>
+                </pre>
+                <pre>
+<code class="output"># Output:
+5
+4
+3
+2
+1</code></pre>
+            </ul>
+            <h3>Classes</h3>
+            <ul>
+                <li>
+                    A class is an object constructor, a blueprint for an object
+                </li>
+                <li>
+                    Use the "__init__()" function to set up the initializing
+                    properties and corresponding values for the objects
+                </li>
+                <li>Methods can also be part of classes</li>
+            </ul>
 
-    def intro(self):
-        print(
-            f"My name is {self.name}, \n"
-            f"I have pets {self.pets}. \n"
-            f"My bank balance is : ${self.bankBalanace}, \n"
-            f"and my favorite meal is {self.faveMeal}")
+            <ul>
+                <li>Basic Class - Object Literal</li>
+                <ul>
+                    <li>Not very useful</li>
+                </ul>
+                <pre>
+<code>class Apple:
+    color = "red"
+    num = 5</code></pre>
+            </ul>
+            <ul>
+                <li>Basic Object</li>
+                <pre>
+<code>fruit1 = Apple()
+print(fruit1.color)</code></pre>
+                <pre>
+<code class="output"># Output:
+red</code></pre>
 
-
-p1 = Person()
-p1.name = "Maria"
-p1.pets = {
-    "dog": "Tris",
-    "cat": "Meot"
-}
-p1.bankBalanace = 25.97
-p1.faveMeal = "Chicken & Waffles"
-print("P1 Intro() is Below:")
-p1.intro()
-
-p2 = Person()
-p2.name = "Vasilly"
-p2.pets = {
-    "rabbit": "Mr. Bunchkin"
-}
-p2.bankBalanace = 397.125
-p2.faveMeal = "French Onion Soup"
-print("P2 Intro() is Below:")
-p2.intro()
-            </code></pre>
-            <pre><code># Output:
-P1 Intro() is Below:
-My name is Maria, 
-I have pets {'dog': 'Tris', 'cat': 'Meot'}. 
-My bank balance is : $25.97, 
-and my favorite meal is Chicken & Waffles
-
-
-P2 Intro() is Below:
-My name is Vasilly, 
-I have pets {'rabbit': 'Mr. Bunchkin'}. 
-My bank balance is : $397.125, 
-and my favorite meal is French Onion Soup</code></pre>
-
-            <h3>Creating Objects - Object Factory</h3>
-            <pre><code>
-class Robot3:
+                <li>Creating Objects with __init__()</li>
+                <pre>
+<code>class Robot:
     def __init__(self, name, weight, color):
         self.name = name
         self.weight = weight
@@ -165,101 +475,130 @@ class Robot3:
         f"I weigh {self.weight} lbs \n"
         f"and I am {self.color} in color!")
 
-r3 = Robot3("Jane", 25, "Pink")
-r3.intro()
+print("Robot 1:")
+r1 = Robot("Jane", 25, "Pink")
+r1.intro()
 
-r4 = Robot3("Garibaldi", 126.9, "Fire house yellow")
-r4.intro()
-            </code></pre>
-            <pre><code># Output:
-Robot 3:
+print("Robot 2:")
+r2 = Robot("Garibaldi", 126.9, "Fire house yellow")
+r2.intro()</code></pre>
+                <pre><code class="output"># Output:
+Robot 1:
 My name is Jane, 
 I weigh 25 lbs 
 and I am Pink in color!
 
-Robot 4:
+Robot 2:
 My name is Garibaldi, 
 I weigh 126.9 lbs 
 and I am Fire house yellow in color!</code></pre>
+                <li>The Pass Statement</li>
+                <pre>
+<code>class Person:
+    pass</code></pre>
+                <h3>Creating Objects with Super class</h3>
 
-            <h3>
-                Selecting from an array of tags, then adding a class to each of
-                them.
-            </h3>
-            <div>
-                <span class="situ-solu">Situ :</span>
-                <p>
-                    I need to add a class to each H1 & H3 element of the html
-                    page, to turn them green. However, there are no classes
-                    attached to these tags.
-                </p>
+                <div>
+                    <span class="situ-solu">Super Class:</span>
+                    <ul>
+                        <li>
+                            An already defined class, that will be adopted by
+                            the current class.
+                        </li>
+                        <li>
+                            Adds functionality of super class into current
+                            class.
+                        </li>
+                        <br />
+                        <span class="situ-solu">Super Class</span>
+                        <pre><code>
+class RobotIntro:
+def __init__(self):
+    self.name = ""
+
+def intro(self):
+    print(f"My name is Bond. {self.name} Bond!")   
+                    </code></pre>
+                        <span class="situ-solu"
+                            >Adding Super Class to current class</span
+                        >
+                        <pre>
+<code>class RobotIntro:
+    def __init__(self):
+        self.name = ""
+
+    def intro(self):
+        print(f"My name is Bond. {self.name} Bond!")
+
+
+class Robot4(RobotIntro):                   #Adding Super Class as an argument when building the class
+    def __init__(self, name, weight):
+        super().__init__()                  #Initializing the Super Class
+        self.name = name
+        self.weight = weight
+
+
+r5 = Robot4("Kia", 87)
+r5.intro()</code></pre>
+                        <pre><code># Output:
+My name is Bond. Kia Bond!</code></pre>
+                    </ul>
+                </div>
+                <li>Deleting Objects</li>
+                <ul>
+                    <pre>
+<code>del p1</code></pre>
+                </ul>
+            </ul>
+            <div id="HowTos">
+                <br /><br />
+                <h1>How Tos:</h1>
+                <h3>Specifying the data type of the variable</h3>
+                <div>
+                    <span class="situ-solu">Solu: </span>
+                    <ul>
+                        <pre>
+<code>a = str(2)
+b = int(5)
+c = float(8)
+
+print(type(a))
+print(type(b))
+print(type(c))</code></pre>
+                        <pre>
+<code class="output"># Output:
+&lt;class 'str'&gt;
+&lt;class 'int'&gt;
+&lt;class 'float'&gt;</code></pre>
+                    </ul>
+                </div>
                 <br />
-                <br />
-                <span class="situ-solu">Solu : </span>
-                <ol>
-                    <li>
-                        I need to make an array of the tags I am looking for.
-                    </li>
-                    <pre>
-                        <code>
-            var Hs = ["h1", "h3"];
-                        </code>
-                    </pre>
-                    <li>
-                        I need to iterate through each of these tags, that are
-                        now part of an array(Node List)
-                    </li>
-                    <pre>
-                        <code>
-            for (let i = 0; i &lt; Hs.length; i++) {
-                var hs = Hs[i];
-            };
-                        </code>
-                    </pre>
-                    <li>
-                        I need to find all the tags that match the items in my
-                        array.
-                    </li>
-                    <pre>
-                        <code>
-            var h = document.querySelectorAll(hs);
-                        </code>
-                    </pre>
-                    <li>
-                        I need to make a function that will toggle on the
-                        classes I want to show up on the tags.
-                    </li>
-                    <pre>
-                        <code>
-            function colorRed(element) {
-                element.classList.toggle("oswald-font");
-                element.classList.toggle("green");
-            }
-                        </code>
-                    </pre>
-                    <li>I need to toggle a class on to each of the tags.</li>
-                    <pre>
-                        <code>
-            h.forEach(colorRed);
-                    </code>
-                </pre>
-                </ol>
+
+                <h3>Recursion - Functions within functions</h3>
+                <div>
+                    <span class="situ-solu">Solu: </span>
+                    <ul>
+                        <pre>
+<code>def multiplication(multiplier):
+    def myFunc(x):
+        return multiplier * x
+
+    return myFunc
+
+multiplyBy3 = multiplication(3)
+print(multiplyBy3(10))
+
+def doAdditionON(x, operation):
+    return operation(x)
+
+result = doAdditionON(5, multiplyBy3)
+print(result)</code></pre>
+                        <pre><code># Output:
+30
+15</code></pre>
+                    </ul>
+                </div>
             </div>
-            <pre>
-                <code>
-            var Hs = ["h1", "h3"];
-            for (let i = 0; i < Hs.length; i++) {
-                var hs = Hs[i];
-                var h = document.querySelectorAll(hs);
-            
-                function colorRed(element) {
-            element.classList.toggle("oswald-font");
-            element.classList.toggle("green");
-                }
-                h.forEach(colorRed);
-            }
-                </code>
-            </pre>
         </div>
         <!-- Through GitHub -->
         <!-- <script src="https://nzscode.github.io/Snippets-Python/snippets-python.js"></script>

@@ -17,13 +17,3 @@ for (let i = 0; i < Hs.length; i++) {
     }
     h.forEach(colorRed);
 }
-
-// Changing the color of the code block if the inner HTML contains Output
-var changeOutputColor = document.querySelectorAll("code");
-for (let i = 0; i < changeOutputColor.length; i++) {
-    let x = changeOutputColor[i];
-    for (let j = 0; j < x.length; j++) {
-        let y = x[j];
-        console.log(y);
-    }
-}
