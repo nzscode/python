@@ -42,6 +42,23 @@ h3 {
     color: red;
 }
 
+.title {
+    font-size: 17px;
+    font-weight: bold;
+    text-decoration: underline;
+}
+
+.sub-title {
+    font-weight: bold;
+    font-style: italic;
+    text-decoration: underline;
+}
+
+.sub-sub-title {
+    font-style: italic;
+    text-decoration: underline;
+}
+
 code {
     word-wrap: break-word;
 }
