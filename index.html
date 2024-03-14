@@ -91,6 +91,215 @@ Hello Cassy, you are 30 years old. You owe $36.45</code></pre>
 At index 0: 1.912, is of type &lt;class 'int'&gt;
 At index 1: Tim, is of type &lt;class 'str'&gt;
 At index 2: True, is of type &lt;class 'bool'&gt;</code></pre>
+                <ul>
+                    <li class="sub-title">Constructing a List</li>
+                    Must use double round brackets when creating the list with
+                    initial values
+
+                    <pre><code>myList = list(("Shoes", "t-shirts", "pants"))
+print(myList)</code></pre>
+                    <pre><code class="output"># Output:
+['Shoes', 't-shirts', 'pants']</code></pre>
+                    <li class="sub-title">Accessing List Items</li>
+                    <ul>
+                        <li class="sub-sub-title">Using the Index Numbers</li>
+                        <pre>
+<code>myList = list(("Shoes", "t-shirts", "pants"))
+print(myList[1])</code></pre>
+                        <pre><code class="output"># Output: 
+t-shirts</code></pre>
+                        <li class="sub-sub-title">
+                            Using a range of Index Numbers
+                        </li>
+                        <pre><code>myList = list(("dogs", "cats", "rabbits", "birds", "hamsters", "ferrets"))
+print(f"Length of List : {len(myList)}")
+print(f"Items from index 3 to the end {myList[3:]}")
+print(f"Items from the start to index 4{myList[:4]}")
+print(f"Items from index 2 to the 5{myList[2:5]}")</code></pre>
+                        <pre><code class="output"># Output:
+Length of List : 6
+Items from index 3 to the end ['birds', 'hamsters', 'ferrets']
+Items from the start to index 4['dogs', 'cats', 'rabbits', 'birds']
+Items from index 2 to the 5['rabbits', 'birds', 'hamsters']</code></pre>
+                    </ul>
+                    <li class="sub-title">Checking if an Item Exists</li>
+                    <pre>
+<code>myList = list(("dogs", "cats", "rabbits", "birds", "hamsters", "ferrets"))
+if "rabbits" in myList:
+    x = myList.index("rabbits")
+    print(f"Yes, rabbits exist in this list at index {x}")</code></pre>
+                    <pre><code class="output"># Output:
+Yes, rabbits is in myList at Index 2</code></pre>
+                    <li class="sub-title">Change the values of a List</li>
+                    <ul>
+                        <li class="sub-sub-title">
+                            Change the values of a single Index
+                        </li>
+                        <pre><code>myList = list(("dogs", "cats", "rabbits", "birds", "hamsters", "ferrets"))
+myList[3] = "mice"
+print(myList)</code></pre>
+                        <pre><code class="output"># Output:
+['dogs', 'cats', 'rabbits', 'mice', 'hamsters', 'ferrets']</code></pre>
+                        <li class="sub-sub-title">
+                            Change the values at a range of indexes
+                        </li>
+                        <pre>
+<code>myList = list(("dogs", "cats", "rabbits", "birds", "hamsters", "ferrets"))
+myList[1:4] = ["mice", "snakes", "toads"]                       #When exact number of items to replace
+print(f"Exact : {myList}")
+myList[1:4] = ["mice", "snakes", "toads", "lizards", "fish"]    #When more number of items to replace
+print(f"More : {myList}")
+myList[1:4] = ["mice", "snakes"]                                #When less number of items to replace
+print(f"Less : {myList}")</code></pre>
+                        <pre><code class="output"># Output:
+Exact : ['dogs', 'mice', 'snakes', 'toads', 'hamsters', 'ferrets']
+More : ['dogs', 'mice', 'snakes', 'toads', 'lizards', 'fish', 'hamsters', 'ferrets']
+Less : ['dogs', 'mice', 'snakes', 'lizards', 'fish', 'hamsters', 'ferrets']</code></pre>
+                    </ul>
+
+                    <li class="sub-title">Add Items to a list</li>
+                    <ul>
+                        <li class="sub-sub-title">Append Items</li>
+                        Inserts items to the end of the list
+                        <pre>
+<code>myList = list(("dogs", "cats", "rabbits", "birds", "hamsters", "ferrets"))
+myList.append("Banana")
+print(myList)</code></pre>
+                        <pre><code class="output"># Output :
+['dogs', 'cats', 'rabbits', 'birds', 'hamsters', 'ferrets', 'Banana']</code></pre>
+                        <li class="sub-sub-title">
+                            Insert Items at Specified Index
+                        </li>
+                        <pre>
+<code>myList = list(("dogs", "cats", "rabbits", "birds", "hamsters", "ferrets"))
+myList.insert(2, "Banana")
+print(myList)</code></pre>
+                        <pre><code class="output"># Output:
+['dogs', 'cats', 'Banana', 'rabbits', 'birds', 'hamsters', 'ferrets']</code></pre>
+                        <li class="sub-sub-title">
+                            Insert items from another iterable (list, tuples,
+                            sets, dictionaries, etc.)
+                        </li>
+                        <pre>
+<code>myList = list(("birds", "hamsters", "ferrets"))
+newTuple = ("Apples", "Oranges")
+newList = ["Red", "Pink"]
+newDict = {
+    "Shapes": ["Square", "Circle"],
+    "Directions": ("North", "South")
+}
+myList.extend(newList)
+print(myList)
+
+myList.extend(newTuple)
+print(myList)
+
+myList.extend(newDict)
+print(myList)</code></pre>
+                        <pre><code class="output"># Output:
+['birds', 'hamsters', 'ferrets', 'Red', 'Pink']
+['birds', 'hamsters', 'ferrets', 'Red', 'Pink', 'Apples', 'Oranges']
+['birds', 'hamsters', 'ferrets', 'Red', 'Pink', 'Apples', 'Oranges', 'Shapes', 'Directions']</code></pre>
+                    </ul>
+                    <li class="sub-title">Removing items from a List</li>
+                    <ul>
+                        <li class="sub-sub-title">Remove a specified item</li>
+                        If there is more than one occurrence, the remove()
+                        method only removes the first occurrence.
+                        <pre>
+<code>myList = list(("birds", "hamsters", "ferrets"))
+myList.remove("hamsters")
+print(myList)</code></pre>
+                        <pre><code class="output"># Output:
+['birds', 'ferrets']</code></pre>
+                        <li class="sub-sub-title">
+                            Remove the item at a specified index
+                        </li>
+                        <ul>
+                            <li>Using pop()</li>
+                            If index is not specified, last item in the list
+                            will be removed
+                            <pre><code>myList = list(("birds", "hamsters", "ferrets"))
+myList.pop(1)
+print(myList)</code></pre>
+                            <pre><code class="output"># Output:
+['birds', 'ferrets']</code></pre>
+                            <li>Using del</li>
+                            Must specifiy an index
+                            <pre>
+<code>myList = list(("birds", "hamsters", "ferrets"))
+del myList[1]
+print(myList)</code></pre>
+                            <pre><code class="output"># Output:
+['birds', 'ferrets']
+</code></pre>
+                        </ul>
+                    </ul>
+                    <li class="sub-title">Clearing / Emptying a list</li>
+                    <pre>
+<code>myList = list(("birds", "hamsters", "ferrets"))
+myList.clear()
+print(myList)</code></pre>
+                    <pre><code class="output"># Output:
+[]</code></pre>
+                    <li class="sub-title">Deleting a List</li>
+                    Will give an error.
+                    <pre>
+<code>myList = list(("birds", "hamsters", "ferrets"))
+del myList
+print(myList)</code></pre>
+                    <pre><code class="output"># Output:
+NameError: name 'myList' is not defined</code></pre>
+                    <li class="sub-title">Loop through a List</li>
+                    <ul>
+                        <li class="sub-sub-title">Iterating items of a list</li>
+                        <pre><code>myList = list(("birds", "hamsters", "ferrets"))
+for i in myList:
+    print(i)</code></pre>
+                        <pre><code class="output"># Output:
+birds
+hamsters
+ferrets</code></pre>
+                        <li class="sub-sub-title">
+                            Iterating through items at index numbers
+                        </li>
+                        <pre>
+<code>myList = list(("birds", "hamsters", "ferrets"))
+for i in range(len(myList)):
+    print(myList[i])</code></pre>
+                        <pre><code class="output"># Output:
+birds
+hamsters
+ferrets</code></pre>
+                        <li class="sub-sub-title">
+                            Iterate using a While Loop
+                        </li>
+                        <pre><code>myList = list(("birds", "hamsters", "ferrets"))
+i = 0
+while i &lt; len(myList):
+    print(myList[i])
+    i += 1</code></pre>
+                        <pre><code class="output"># Output:
+birds
+hamsters
+ferrets</code></pre>
+                        <li class="sub-sub-title">
+                            Looping using list comprehension
+                        </li>
+                        <pre><code>myList = list(("birds", "hamsters", "ferrets"))
+[print(item) for item in myList]</code></pre>
+                        <pre><code class="output"># Output:
+birds
+hamsters
+ferrets</code></pre>
+                    </ul>
+                    <li class="sub-title">Sorting Lists</li>
+                    <ul>
+                        <li class="sub-sub-title">
+                            Sort List Alphanumerically
+                        </li>
+                    </ul>
+                </ul>
                 <li class="title">Tuples - (Round Brackets)</li>
                 <ul>
                     <li>Ordered</li>
@@ -288,10 +497,11 @@ print(f"Cost = {cost}\n"
     f"Groceries = {groceries}")</code></pre>
                 </ul>
                 <li class="sub-title">Looping through Tuples</li>
-                <pre>
-<code>for i in myTuple:
+                <ul>
+                    <li class="sub-sub-title">Iterating through a Tuple</li>
+                    <pre><code>for i in myTuple:
     print(i)</code></pre>
-                <pre><code class="output"># Output: 
+                    <pre><code class="output"># Output: 
 2.358
 Robby
 False
@@ -300,11 +510,12 @@ Lisa
 Li -Mae
 Carey
 Onions, Potatoes</code></pre>
-                <li>Looping through the index numbers of the Tuples</li>
-                <pre>
-<code>for i in range(len(myTuple)):
+                    <li class="sub-sub-title">
+                        Looping through the index numbers of the Tuples
+                    </li>
+                    <pre><code>for i in range(len(myTuple)):
     print(myTuple[i])</code></pre>
-                <pre><code class="output"># Output:
+                    <pre><code class="output"># Output:
 2.358
 Robby
 False
@@ -314,13 +525,14 @@ Li -Mae
 Carey
 Onions, Potatoes
 </code></pre>
-                <li>Looping throught the tuple using a while loop</li>
-                <pre>
-<code>i = 0
+                    <li class="sub-sub-title">
+                        Looping throught the tuple using a while loop
+                    </li>
+                    <pre><code>i = 0
 while (i < (len(myTuple))):
     print(myTuple[i])
     i += 1</code></pre>
-                <pre><code class="output"># Output:
+                    <pre><code class="output"># Output:
 2.358
 Robby
 False
@@ -330,6 +542,32 @@ Li -Mae
 Carey
 Onions, Potatoes
 </code></pre>
+                </ul>
+                <li>Tuple Methods</li>
+                <ul>
+                    <li>Count ()</li>
+                    <ul>
+                        <li>
+                            Counts how many times a given item occurs in the
+                            tuple
+                        </li>
+                        <pre>
+<code>myTuple = ("John", "Lisa", "Li -Mae", "Carey", "John", "Yusuf", "John", "Tracy")
+print(myTuple.count("John"))</code></pre>
+                        <pre><code class="output"># Output: 
+3</code></pre>
+                    </ul>
+
+                    <li>index()</li>
+                    <ul>
+                        <li>Searches for the first index</li>
+                        <pre>
+<code>myTuple = ("John", "Lisa", "Li -Mae", "Carey", "John", "Yusuf", "John", "Tracy")
+print(myTuple.index("John"))</code></pre>
+                        <pre><code class="output"># Output: 
+0</code></pre>
+                    </ul>
+                </ul>
             </ul>
             <li class="title">Dictionaries - {Curly Brackets}</li>
             <ul>
@@ -362,6 +600,7 @@ for key, value in myDict.items():
     key is fruits : value is ['apples', 'bananas', 'oranges']
     key is grades : value is {'English': 97, 'Math': 85, 'French': 99}
 </code></pre>
+
             <ul>
                 <li class="sub-title">Deleting a dictionary</li>
                 <ul>
