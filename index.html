@@ -331,31 +331,34 @@ print(myList)</code></pre>
                     <pre><code class="output"># Output:
 ['tomatoes', 'onions', 'garlic', 'broccoli', 'Green chillies', 'Bell pepper']</code></pre>
                     <li class="sub-title">Copying a List</li>
-                    <ul><li class="sub-sub-title">copy()</li>
-                    <pre>
+                    <ul>
+                        <li class="sub-sub-title">copy()</li>
+                        <pre>
 <code>myList = ["onions", "broccoli", "garlic", "tomatoes", "Green chillies", "Bell pepper"]
 newList = myList.copy()
 print(newList)</code></pre>
-<pre><code class="output"># Output:
+                        <pre><code class="output"># Output:
 ['onions', 'broccoli', 'garlic', 'tomatoes', 'Green chillies', 'Bell pepper']</code></pre>
-<li class="sub-sub-title">list()</li>
-<pre>
+                        <li class="sub-sub-title">list()</li>
+                        <pre>
 <code>myList = ["onions", "broccoli", "garlic", "tomatoes", "Green chillies", "Bell pepper"]
 newList = list(myList)
 print(newList)</code></pre>
-<pre><code class="output"># Output:
-['onions', 'broccoli', 'garlic', 'tomatoes', 'Green chillies', 'Bell pepper']</code></pre></ul>
-<li class="sub-title">Join Lists</li>
-<ul><li class="sub-sub-title">Using "+"</li>
-<pre>
+                        <pre><code class="output"># Output:
+['onions', 'broccoli', 'garlic', 'tomatoes', 'Green chillies', 'Bell pepper']</code></pre>
+                    </ul>
+                    <li class="sub-title">Join Lists</li>
+                    <ul>
+                        <li class="sub-sub-title">Using "+"</li>
+                        <pre>
 <code>myList = ["Sheila", "Anne", "Rodney"]
 otherList = ["Lions", "Bears"]
 newList = myList + otherList
 print(newList)</code></pre>
-<pre><code class="output"># Output:
+                        <pre><code class="output"># Output:
 ['Sheila', 'Anne', 'Rodney', 'Lions', 'Bears']</code></pre>
-<li class="sub-sub-title">append()</li>
-<pre>
+                        <li class="sub-sub-title">append()</li>
+                        <pre>
 <code>myList = ["Sheila", "Anne", "Rodney"]
 otherList = ["Lions", "Bears"]
 
@@ -363,37 +366,40 @@ for x in otherList:
     myList.append(x)
 
 print(myList)</code></pre>
-<pre><code class="output"># Output:
+                        <pre><code class="output"># Output:
 ['Sheila', 'Anne', 'Rodney', 'Lions', 'Bears']</code></pre>
-<li class="sub-sub-title">extend()</li>
-<pre>
+                        <li class="sub-sub-title">extend()</li>
+                        <pre>
 <code>myList = ["Sheila", "Anne", "Rodney"]
 otherList = ["Lions", "Bears"]
 myList.extend(otherList)
 print(myList)</code></pre>
-<pre><code class="output"># Output:
-['Sheila', 'Anne', 'Rodney', 'Lions', 'Bears']</code></pre></ul>
-<li class="sub-title">List Methods</li>
-<ul><li class="sub-sub-title">count()</li>
-<pre>
+                        <pre><code class="output"># Output:
+['Sheila', 'Anne', 'Rodney', 'Lions', 'Bears']</code></pre>
+                    </ul>
+                    <li class="sub-title">List Methods</li>
+                    <ul>
+                        <li class="sub-sub-title">count()</li>
+                        <pre>
 <code>myList = ["kiwi", "cherry", "apple", "melon", "cherry"]
 x = myList.count("cherry")
 print(x)</code></pre>
-<pre><code class="output"># Output:
+                        <pre><code class="output"># Output:
 2</code></pre>
-<li class="sub-sub-title">index()</li>
-<pre>
+                        <li class="sub-sub-title">index()</li>
+                        <pre>
 <code>myList = ["kiwi", "cherry", "apple", "melon", "cherry"]
 x = myList.index("melon")
 print(x)</code></pre>
-<pre><code class="output"># Output:
-3</code></pre></ul>
-<li class="sub-title">List Comprehension</li>
-<ul>
-    <li class="sub-sub-title">Example 1</li>
-    <ul class="left-side">
-    <li>For</li>
-    <pre>
+                        <pre><code class="output"># Output:
+3</code></pre>
+                    </ul>
+                    <li class="sub-title">List Comprehension</li>
+                    <ul>
+                        <li class="sub-sub-title">Example 1</li>
+                        <ul class="left-side">
+                            <li>For</li>
+                            <pre>
 <code>myList = ["kiwi", "cherry", "apple", "melon", "cherry"]
 
 newList = []
@@ -403,59 +409,60 @@ for x in myList:
         newList.append(x)
 
 print(newList)</code></pre>
-<pre><code class="output"># Output:
+                            <pre><code class="output"># Output:
 ['cherry', 'apple', 'melon', 'cherry']</code></pre>
-</ul>
-<ul class="right-side">
-    <li>List Comprehension</li>
-    <pre>
+                        </ul>
+                        <ul class="right-side">
+                            <li>List Comprehension</li>
+                            <pre>
 <code>newList = [x for x in myList if "e" in x]
 print(newList)</code></pre>
-<pre><code class="output"># Output:
+                            <pre><code class="output"># Output:
 ['cherry', 'apple', 'melon', 'cherry']</code></pre>
-</ul>
-<li class="sub-sub-title">Example 2</li>
-    <pre>
+                        </ul>
+                        <li class="sub-sub-title">Example 2</li>
+                        <pre>
 <code>myList = ["kiwi", "cherry", "apple", "melon", "cherry"]
 
 newList = [x for x in myList if x != "melon"]
 print(newList)</code></pre>
-<pre><code class="output"># Output:
+                        <pre><code class="output"># Output:
 ['kiwi', 'cherry', 'apple', 'cherry']</code></pre>
 
-<li class="sub-sub-title">Example 3</li>
-<pre>
+                        <li class="sub-sub-title">Example 3</li>
+                        <pre>
 <code>myList = ["kiwi", "cherry", "apple", "melon", "cherry"]
 
 newList = [x for x in myList]
 print(newList)</code></pre>
-<pre><code class="output"># Output:
+                        <pre><code class="output"># Output:
 ['kiwi', 'cherry', 'apple', 'melon', 'cherry']</code></pre>
-<li class="sub-sub-title">Example 4</li>
-<pre>
+                        <li class="sub-sub-title">Example 4</li>
+                        <pre>
 <code>newList = [x for x in range(10)]
 print(newList)</code></pre>
-<pre><code class="output"># Output:
+                        <pre><code class="output"># Output:
 [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]</code></pre>
-<li class="sub-sub-title">Example 5</li>
-<pre>
+                        <li class="sub-sub-title">Example 5</li>
+                        <pre>
 <code>myList = ["kiwi", "cherry", "apple", "melon", "cherry"]
 
 newList = [x.upper() for x in myList]
 print(newList)</code></pre>
-<pre><code class="output"># Output:
+                        <pre><code class="output"># Output:
 ['KIWI', 'CHERRY', 'APPLE', 'MELON', 'CHERRY']</code></pre>
-<li class="sub-sub-title">Example 6</li>
-<pre>
+                        <li class="sub-sub-title">Example 6</li>
+                        <pre>
 <code>myList = ["kiwi", "cherry", "apple", "melon", "cherry"]
 
 newList = ["fruity" for x in myList]
 print(newList)</code></pre>
-<pre><code class="output"># Output:
+                        <pre><code class="output"># Output:
 ['fruity', 'fruity', 'fruity', 'fruity', 'fruity']</code></pre>
-<li class="sub-sub-title">Example 7</li>
-<ul><li>For</li>
-<pre>
+                        <li class="sub-sub-title">Example 7</li>
+                        <ul>
+                            <li>For</li>
+                            <pre>
 <code>newList2 = []
 for x in myList:
     if x != "cherry":
@@ -463,193 +470,188 @@ for x in myList:
     else:
         newList2.append("orange")
 print(newList2)</code></pre>
-<pre><code class="output"># Output:
+                            <pre><code class="output"># Output:
 ['kiwi', 'orange', 'apple', 'melon', 'orange']</code></pre>
-</ul>
-<ul><li>List Comprehension</li>
-<pre>
+                        </ul>
+                        <ul>
+                            <li>List Comprehension</li>
+                            <pre>
 <code>myList = ["kiwi", "cherry", "apple", "melon", "cherry"]
 
 newList = [x if x != "cherry" else "orange" for x in myList]
 print(newList)</code></pre>
-<pre><code class="output"># Output:
-['kiwi', 'orange', 'apple', 'melon', 'orange']</code></pre></ul>
-</ul></ul>
-
-
-
+                            <pre><code class="output"># Output:
+['kiwi', 'orange', 'apple', 'melon', 'orange']</code></pre>
+                        </ul>
+                    </ul>
                 </ul>
-                <li class="title">Tuples - (Round Brackets)</li>
-                <ul>
-                    <li>Ordered</li>
-                    <li>Unchangeable</li>
-                    <li>Indexed</li>
-                    <li>Can have duplicates</li>
-                    <li>
-                        Can store String("anything within single/double
-                        quotations"), int(Integers/Floats), and
-                        Boolean(True/False) data types
-                    </li>
-                </ul>
-                <pre>
+            </ul>
+            <li class="title">Tuples - (Round Brackets)</li>
+            <ul>
+                <li>Ordered</li>
+                <li>Unchangeable</li>
+                <li>Indexed</li>
+                <li>Can have duplicates</li>
+                <li>
+                    Can store String("anything within single/double
+                    quotations"), int(Integers/Floats), and Boolean(True/False)
+                    data types
+                </li>
+            </ul>
+            <pre>
 <code>myTuple = (2.358, "Robby", False, "John", "Lisa", "Li -Mae", "Carey", ("Onions, Potatoes"))</code></pre>
+            <ul>
+                <li class="sub-title">Constructing a Tuple</li>
+                If creating a tuple with only one item, a comma must be used
+                after, if not it will NOT be considered a tuple.
                 <ul>
-                    <li class="sub-title">Constructing a Tuple</li>
-                    If creating a tuple with only one item, a comma must be used
-                    after, if not it will NOT be considered a tuple.
-                    <ul>
-                        <li>Creating a tuple by variable declaration</li>
-                        <pre>
+                    <li>Creating a tuple by variable declaration</li>
+                    <pre>
 <code>myTuple = ()
 print(type(myTuple))</code></pre>
-                        <pre><code class="output"># Output:
+                    <pre><code class="output"># Output:
 &lt;class 'tuple'&gt;
 </code></pre>
-                        <li>Using a tuple() Constructor</li>
-                        <pre>
+                    <li>Using a tuple() Constructor</li>
+                    <pre>
 <code>newTuple = tuple("a", 1, True)</code>
                     </pre>
-                    </ul>
-                    <li class="sub-title">Accessing Tuple Items</li>
+                </ul>
+                <li class="sub-title">Accessing Tuple Items</li>
 
-                    <ul>
-                        <li>Using the index number</li>
-                        <pre><code>print(myTuple[1])</code></pre>
+                <ul>
+                    <li>Using the index number</li>
+                    <pre><code>print(myTuple[1])</code></pre>
 
-                        <pre><code class="output"># Output: 
+                    <pre><code class="output"># Output: 
 Robby</code></pre>
-                        <li>Using a range of Index Numbers</li>
-                        <pre>
+                    <li>Using a range of Index Numbers</li>
+                    <pre>
 <code>print(f"Length of Tuple : {len(myTuple)}")
 print(f"Items from index 3 to the end {myTuple[3:]}")
 print(f"Items from the start to index 4{myTuple[:4]}")
 print(f"Items from index 2 to the 5{myTuple[2:5]}")</code></pre>
-                        <pre><code class="output"># Output:
+                    <pre><code class="output"># Output:
 Length of Tuple : 8
 Items from index 3 to the end ('John', 'Lisa', 'Li -Mae', 'Carey', 'Onions, Potatoes')
 Items from the start to index 4(2.358, 'Robby', False, 'John')
 Items from index 2 to the 5(False, 'John', 'Lisa')</code></pre>
-                    </ul>
-                    <li class="sub-title">Checking if an item exists</li>
+                </ul>
+                <li class="sub-title">Checking if an item exists</li>
 
-                    <pre>
+                <pre>
 <code>if "Carey" in myTuple:
     print("Carey is in myTuple")</code></pre>
-                    <pre><code class="output"># Output: 
+                <pre><code class="output"># Output: 
 Carey is in myTuple</code></pre>
-                    <li class="sub-title">Change the values of the tuple</li>
-                    <ol>
-                        <li>
-                            Since a tuple is unchangeable, first convert the
-                            tuple to a list
-                        </li>
-                        <pre>
-<code>tupleList = list(myTuple)</code></pre>
-                        <li>Now change the item at the required index</li>
-                        <pre>
-<code>tupleList[3] = "Anna"</code></pre>
-                        <li>
-                            Now convert the list back into a tuple(Can replace
-                            original tuple, with this new tuple)
-                        </li>
-                        <pre>
-<code>myTuple = tuple(tupleList)</code></pre>
-                    </ol>
+                <li class="sub-title">Change the values of the tuple</li>
+                <ol>
+                    <li>
+                        Since a tuple is unchangeable, first convert the tuple
+                        to a list
+                    </li>
                     <pre>
+<code>tupleList = list(myTuple)</code></pre>
+                    <li>Now change the item at the required index</li>
+                    <pre>
+<code>tupleList[3] = "Anna"</code></pre>
+                    <li>
+                        Now convert the list back into a tuple(Can replace
+                        original tuple, with this new tuple)
+                    </li>
+                    <pre>
+<code>myTuple = tuple(tupleList)</code></pre>
+                </ol>
+                <pre>
 <code>tupleList = list(myTuple)
 tupleList[3] = "Anna"
 myTuple = tuple(tupleList)
 print(myTuple)</code></pre>
-                    <pre><code class="output"># Output: 
+                <pre><code class="output"># Output: 
 (2.358, 'Robby', False, 'Anna', 'Lisa', 'Li -Mae', 'Carey', 'Onions, Potatoes')
 </code></pre>
-                    <li class="sub-title">Adding a tuple to a tuple</li>
-                    <pre>
+                <li class="sub-title">Adding a tuple to a tuple</li>
+                <pre>
 <code>newTuple = (5, "Amy Adams", ["ten", "eleven"])
 myTuple += newTuple
 print(myTuple)</code></pre>
-                    <pre><code class="output"># Output:
+                <pre><code class="output"># Output:
 (2.358, 'Robby', False, 'John', 'Lisa', 'Li -Mae', 'Carey', 'Onions, Potatoes', 5, 'Amy Adams', ['ten', 'eleven'])</code></pre>
-                    <li class="sub-title">Removing items from a Tuple</li>
-                    <ol>
-                        <li>
-                            Since a tuple is unchangeable, first convert the
-                            tuple to a list
-                        </li>
-                        <pre>
-<code>tupleList = list(myTuple)</code></pre>
-                        <li>Now remove the item.</li>
-                        <ul>
-                            <li>
-                                When removing an item that is made up of
-                                multiple items, you have to list them all.(See
-                                below)
-                            </li>
-                        </ul>
-                        <pre>
-<code>tupleList.remove("Onions, Potatoes")</code></pre>
-                        <li>
-                            Now convert the list back into a tuple(Can replace
-                            original tuple, with this new tuple)
-                        </li>
-                        <pre>
-<code>myTuple = tuple(tupleList)</code></pre>
-                    </ol>
+                <li class="sub-title">Removing items from a Tuple</li>
+                <ol>
+                    <li>
+                        Since a tuple is unchangeable, first convert the tuple
+                        to a list
+                    </li>
                     <pre>
+<code>tupleList = list(myTuple)</code></pre>
+                    <li>Now remove the item.</li>
+                    <ul>
+                        <li>
+                            When removing an item that is made up of multiple
+                            items, you have to list them all.(See below)
+                        </li>
+                    </ul>
+                    <pre>
+<code>tupleList.remove("Onions, Potatoes")</code></pre>
+                    <li>
+                        Now convert the list back into a tuple(Can replace
+                        original tuple, with this new tuple)
+                    </li>
+                    <pre>
+<code>myTuple = tuple(tupleList)</code></pre>
+                </ol>
+                <pre>
 <code>tupleList = list(myTuple)
 tupleList.remove("Onions, Potatoes")
 myTuple = tuple(tupleList)
 print(myTuple)</code></pre>
-                    <pre><code class="output"># Output: 
+                <pre><code class="output"># Output: 
 (2.358, 'Robby', False, 'John', 'Lisa', 'Li -Mae', 'Carey')
 </code></pre>
-                    <li class="sub-title">Deleting a Tuple</li>
-                    <pre>
+                <li class="sub-title">Deleting a Tuple</li>
+                <pre>
 <code>del myTuple
 print(myTuple)</code></pre>
-                    <ul>
-                        <li>
-                            Raises an error since the tuple no longer exists.
-                        </li>
-                    </ul>
-                    <pre><code class="output"># Output: 
+                <ul>
+                    <li>Raises an error since the tuple no longer exists.</li>
+                </ul>
+                <pre><code class="output"># Output: 
 NameError: name 'myTuple' is not defined. Did you mean: 'tuple'?</code></pre>
-                    <li class="sub-title">Unpacking a Tuple</li>
-                    <ul>
-                        <li>
-                            In Python, values from within the tuple can be
-                            extracted out and assigned to variables.
-                        </li>
-                        <li>
-                            The number of variables must match the number of
-                            Tuples.
-                            <ul>
-                                <li>
-                                    If you want more than one item to belong to
-                                    the variable, you must place a * in front of
-                                    the variable.
-                                </li>
-                                <li>
-                                    If there is more than one set of data within
-                                    the tuple, that has more than one element
-                                    assigned to it,<br />
-                                    then the data must be unpacked together as
-                                    one variable, and then break it down with
-                                    lists.
-                                </li>
-                                <ol>
-                                    <li>Assign the tuple data to variables:</li>
-                                    <pre>
+                <li class="sub-title">Unpacking a Tuple</li>
+                <ul>
+                    <li>
+                        In Python, values from within the tuple can be extracted
+                        out and assigned to variables.
+                    </li>
+                    <li>
+                        The number of variables must match the number of Tuples.
+                        <ul>
+                            <li>
+                                If you want more than one item to belong to the
+                                variable, you must place a * in front of the
+                                variable.
+                            </li>
+                            <li>
+                                If there is more than one set of data within the
+                                tuple, that has more than one element assigned
+                                to it,<br />
+                                then the data must be unpacked together as one
+                                variable, and then break it down with lists.
+                            </li>
+                            <ol>
+                                <li>Assign the tuple data to variables:</li>
+                                <pre>
 <code>cost, teacher, bring_lunch, *students_and_assistants, bus_company = tuple_data</code></pre>
-                                    <li>
-                                        Break down the combined tuple data into
-                                        their own variables, using indexes
-                                    </li>
-                                    <pre>
+                                <li>
+                                    Break down the combined tuple data into
+                                    their own variables, using indexes
+                                </li>
+                                <pre>
 <code>students = students_and_assistants[:4]
 assistant_teachers = students_and_assistants[4:6]</code></pre>
-                                </ol>
-                                <pre>
+                            </ol>
+                            <pre>
 <code>tuple_data = (50, "Mr. Smith", True, "John", "Alice", "Bob", "Emily", "Ms. Johnson", "Mr. Brown", "ABC Bus Company")
 
 cost, teacher, bring_lunch, *students_and_assistants, bus_company = tuple_data
@@ -663,10 +665,10 @@ print("Bring lunch:", bring_lunch)
 print("Students:", students)
 print("Assistant Teachers:", assistant_teachers)
 print("Bus Company:", bus_company)</code></pre>
-                            </ul>
-                        </li>
-                    </ul>
-                    <pre>
+                        </ul>
+                    </li>
+                </ul>
+                <pre>
 <code>myTuple = (2.358, "Robby", False, "John", "Lisa", "Li -Mae", "Carey", ("Onions, Potatoes"))
 (cost, teacher, bring_lunch, *students, groceries) = myTuple
 print(f"Cost = {cost}\n"
@@ -674,7 +676,6 @@ print(f"Cost = {cost}\n"
     f"Bring Lunch = {bring_lunch}\n"
     f"Students = {students}\n"
     f"Groceries = {groceries}")</code></pre>
-                </ul>
                 <li class="sub-title">Looping through Tuples</li>
                 <ul>
                     <li class="sub-sub-title">Iterating through a Tuple</li>
@@ -725,22 +726,22 @@ Onions, Potatoes
                 <li class="sub-title">Tuple Methods</li>
                 <ul>
                     <li class="sub-sub-title">count ()</li>
-                            Counts how many times a given item occurs in the
-                            tuple
-                        <pre>
+                    Counts how many times a given item occurs in the tuple
+                    <pre>
 <code>myTuple = ("John", "Lisa", "Li -Mae", "Carey", "John", "Yusuf", "John", "Tracy")
 print(myTuple.count("John"))</code></pre>
-                        <pre><code class="output"># Output: 
+                    <pre><code class="output"># Output: 
 3</code></pre>
-                    <li class="sub-sub-title">index()</li>Searches for the first index
-                        <pre>
+                    <li class="sub-sub-title">index()</li>
+                    Searches for the first index
+                    <pre>
 <code>myTuple = ("John", "Lisa", "Li -Mae", "Carey", "John", "Yusuf", "John", "Tracy")
 print(myTuple.index("John"))</code></pre>
-                        <pre><code class="output"># Output: 
+                    <pre><code class="output"># Output: 
 0</code></pre>
-                    </ul>
                 </ul>
             </ul>
+
             <li class="title">Dictionaries - {Curly Brackets}</li>
             <ul>
                 <li>Ordered</li>
