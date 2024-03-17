@@ -388,6 +388,95 @@ x = myList.index("melon")
 print(x)</code></pre>
 <pre><code class="output"># Output:
 3</code></pre></ul>
+<li class="sub-title">List Comprehension</li>
+<ul>
+    <li class="sub-sub-title">Example 1</li>
+    <ul class="left-side">
+    <li>For</li>
+    <pre>
+<code>myList = ["kiwi", "cherry", "apple", "melon", "cherry"]
+
+newList = []
+
+for x in myList:
+    if "e" in x:
+        newList.append(x)
+
+print(newList)</code></pre>
+<pre><code class="output"># Output:
+['cherry', 'apple', 'melon', 'cherry']</code></pre>
+</ul>
+<ul class="right-side">
+    <li>List Comprehension</li>
+    <pre>
+<code>newList = [x for x in myList if "e" in x]
+print(newList)</code></pre>
+<pre><code class="output"># Output:
+['cherry', 'apple', 'melon', 'cherry']</code></pre>
+</ul>
+<li class="sub-sub-title">Example 2</li>
+    <pre>
+<code>myList = ["kiwi", "cherry", "apple", "melon", "cherry"]
+
+newList = [x for x in myList if x != "melon"]
+print(newList)</code></pre>
+<pre><code class="output"># Output:
+['kiwi', 'cherry', 'apple', 'cherry']</code></pre>
+
+<li class="sub-sub-title">Example 3</li>
+<pre>
+<code>myList = ["kiwi", "cherry", "apple", "melon", "cherry"]
+
+newList = [x for x in myList]
+print(newList)</code></pre>
+<pre><code class="output"># Output:
+['kiwi', 'cherry', 'apple', 'melon', 'cherry']</code></pre>
+<li class="sub-sub-title">Example 4</li>
+<pre>
+<code>newList = [x for x in range(10)]
+print(newList)</code></pre>
+<pre><code class="output"># Output:
+[0, 1, 2, 3, 4, 5, 6, 7, 8, 9]</code></pre>
+<li class="sub-sub-title">Example 5</li>
+<pre>
+<code>myList = ["kiwi", "cherry", "apple", "melon", "cherry"]
+
+newList = [x.upper() for x in myList]
+print(newList)</code></pre>
+<pre><code class="output"># Output:
+['KIWI', 'CHERRY', 'APPLE', 'MELON', 'CHERRY']</code></pre>
+<li class="sub-sub-title">Example 6</li>
+<pre>
+<code>myList = ["kiwi", "cherry", "apple", "melon", "cherry"]
+
+newList = ["fruity" for x in myList]
+print(newList)</code></pre>
+<pre><code class="output"># Output:
+['fruity', 'fruity', 'fruity', 'fruity', 'fruity']</code></pre>
+<li class="sub-sub-title">Example 7</li>
+<ul><li>For</li>
+<pre>
+<code>newList2 = []
+for x in myList:
+    if x != "cherry":
+        newList2.append(x)
+    else:
+        newList2.append("orange")
+print(newList2)</code></pre>
+<pre><code class="output"># Output:
+['kiwi', 'orange', 'apple', 'melon', 'orange']</code></pre>
+</ul>
+<ul><li>List Comprehension</li>
+<pre>
+<code>myList = ["kiwi", "cherry", "apple", "melon", "cherry"]
+
+newList = [x if x != "cherry" else "orange" for x in myList]
+print(newList)</code></pre>
+<pre><code class="output"># Output:
+['kiwi', 'orange', 'apple', 'melon', 'orange']</code></pre></ul>
+</ul></ul>
+
+
 
                 </ul>
                 <li class="title">Tuples - (Round Brackets)</li>
