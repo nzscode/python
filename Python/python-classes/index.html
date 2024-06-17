@@ -3,46 +3,86 @@
     <head>
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <title>Document</title>
+        <link rel="stylesheet" href="../../style.css" />
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Kanit:wght@400;500;600;700&family=Roboto:ital,wght@0,400;0,700;1,400;1,700&display=swap"
+            rel="stylesheet"
+        />
+        <title>Python: Classes</title>
     </head>
     <body>
-        <header></header>
+        <!-- NAVIGATION MENU - SIDE OPEN -->
+        <header>
+            <div id="title-bar-backing"></div>
+            <h1 id="title-bar">
+                <span
+                    id="nav-hamburger"
+                    style="cursor: pointer"
+                    onclick="openNav()"
+                    >&#9776;</span
+                >
+                <span id="page-title">Classes</span>
+            </h1>
+
+            <div id="mySidenav" class="sidenav">
+                <a
+                    href="javascript:void(0)"
+                    class="closebtn"
+                    onclick="closeNav()"
+                    >&times;</a
+                >
+                <nav id="nav"></nav>
+                <div class="space-block"></div>
+            </div>
+        </header>
         <main>
             <article>
-                <h3>Classes</h3>
-                <ul>
-                    <li>
-                        A class is an object constructor, a blueprint for an
-                        object
-                    </li>
-                    <li>
-                        Use the "__init__()" function to set up the initializing
-                        properties and corresponding values for the objects
-                    </li>
-                    <li>Methods can also be part of classes</li>
-                </ul>
-
-                <ul>
-                    <li>Basic Class - Object Literal</li>
+                <section>
+                    <h2 class="lvl2" id="classes">Classes</h2>
                     <ul>
-                        <li>Not very useful</li>
+                        <li>
+                            A class is an object constructor, a blueprint for an
+                            object
+                        </li>
+                        <li>
+                            Use the "__init__()" function to set up the
+                            initializing properties and corresponding values for
+                            the objects
+                        </li>
+                        <li>Methods can also be part of classes</li>
                     </ul>
-                    <pre>
+                    <section>
+                        <h3 class="lvl3" id="object-literal">Object Literal</h3>
+
+                        <ul>
+                            <li>Not very useful</li>
+                        </ul>
+                        <div class="outer-table">
+                            <div class="head-row-full">
+                                <div class="cell-header">Example</div>
+                            </div>
+                            <div class="body-row-full">
+                                <div class="cells">
+                                    <pre>
 <code>class Apple:
     color = "red"
     num = 5</code></pre>
-                </ul>
-                <ul>
-                    <li>Basic Object</li>
-                    <pre>
+                                </div>
+                            </div>
+                        </div>
+                        <ul>
+                            <li>Basic Object</li>
+                            <pre>
 <code>fruit1 = Apple()
 print(fruit1.color)</code></pre>
-                    <pre>
+                            <pre>
 <code class="output"># Output:
 red</code></pre>
 
-                    <li>Creating Objects with __init__()</li>
-                    <pre>
+                            <li>Creating Objects with __init__()</li>
+                            <pre>
 <code>class Robot:
     def __init__(self, name, weight, color):
         self.name = name
@@ -61,7 +101,7 @@ r1.intro()
 print("Robot 2:")
 r2 = Robot("Garibaldi", 126.9, "Fire house yellow")
 r2.intro()</code></pre>
-                    <pre><code class="output"># Output:
+                            <pre><code class="output"># Output:
 Robot 1:
 My name is Jane, 
 I weigh 25 lbs 
@@ -71,26 +111,26 @@ Robot 2:
 My name is Garibaldi, 
 I weigh 126.9 lbs 
 and I am Fire house yellow in color!</code></pre>
-                    <li>The Pass Statement</li>
-                    <pre>
+                            <li>The Pass Statement</li>
+                            <pre>
 <code>class Person:
     pass</code></pre>
-                    <h3>Creating Objects with Super class</h3>
+                            <h3>Creating Objects with Super class</h3>
 
-                    <div>
-                        <span class="situ-solu">Super Class:</span>
-                        <ul>
-                            <li>
-                                An already defined class, that will be adopted
-                                by the current class.
-                            </li>
-                            <li>
-                                Adds functionality of super class into current
-                                class.
-                            </li>
-                            <br />
-                            <span class="situ-solu">Super Class</span>
-                            <pre><code>
+                            <div>
+                                <span class="situ-solu">Super Class:</span>
+                                <ul>
+                                    <li>
+                                        An already defined class, that will be
+                                        adopted by the current class.
+                                    </li>
+                                    <li>
+                                        Adds functionality of super class into
+                                        current class.
+                                    </li>
+                                    <br />
+                                    <span class="situ-solu">Super Class</span>
+                                    <pre><code>
 class RobotIntro:
 def __init__(self):
     self.name = ""
@@ -98,10 +138,11 @@ def __init__(self):
 def intro(self):
     print(f"My name is Bond. {self.name} Bond!")   
                     </code></pre>
-                            <span class="situ-solu"
-                                >Adding Super Class to current class</span
-                            >
-                            <pre>
+                                    <span class="situ-solu"
+                                        >Adding Super Class to current
+                                        class</span
+                                    >
+                                    <pre>
 <code>class RobotIntro:
     def __init__(self):
         self.name = ""
@@ -119,24 +160,24 @@ class Robot4(RobotIntro):                   #Adding Super Class as an argument w
 
 r5 = Robot4("Kia", 87)
 r5.intro()</code></pre>
-                            <pre><code># Output:
+                                    <pre><code># Output:
 My name is Bond. Kia Bond!</code></pre>
-                        </ul>
-                    </div>
-                    <li>Deleting Objects</li>
-                    <ul>
-                        <pre>
+                                </ul>
+                            </div>
+                            <li>Deleting Objects</li>
+                            <ul>
+                                <pre>
 <code>del p1</code></pre>
-                    </ul>
-                </ul>
-                <div id="HowTos">
-                    <br /><br />
-                    <h1>How Tos:</h1>
-                    <h3>Specifying the data type of the variable</h3>
-                    <div>
-                        <span class="situ-solu">Solu: </span>
-                        <ul>
-                            <pre>
+                            </ul>
+                        </ul>
+                        <div id="HowTos">
+                            <br /><br />
+                            <h1>How Tos:</h1>
+                            <h3>Specifying the data type of the variable</h3>
+                            <div>
+                                <span class="situ-solu">Solu: </span>
+                                <ul>
+                                    <pre>
 <code>a = str(2)
 b = int(5)
 c = float(8)
@@ -144,20 +185,20 @@ c = float(8)
 print(type(a))
 print(type(b))
 print(type(c))</code></pre>
-                            <pre>
+                                    <pre>
 <code class="output"># Output:
 &lt;class 'str'&gt;
 &lt;class 'int'&gt;
 &lt;class 'float'&gt;</code></pre>
-                        </ul>
-                    </div>
-                    <br />
+                                </ul>
+                            </div>
+                            <br />
 
-                    <h3>Recursion - Functions within functions</h3>
-                    <div>
-                        <span class="situ-solu">Solu: </span>
-                        <ul>
-                            <pre>
+                            <h3>Recursion - Functions within functions</h3>
+                            <div>
+                                <span class="situ-solu">Solu: </span>
+                                <ul>
+                                    <pre>
 <code>def multiplication(multiplier):
     def myFunc(x):
         return multiplier * x
@@ -172,14 +213,45 @@ def doAdditionON(x, operation):
 
 result = doAdditionON(5, multiplyBy3)
 print(result)</code></pre>
-                            <pre><code># Output:
+                                    <pre><code># Output:
 30
 15</code></pre>
-                        </ul>
-                    </div>
-                </div>
+                                </ul>
+                            </div>
+                        </div>
+                    </section>
+                </section>
             </article>
         </main>
-        <footer></footer>
+        <br /><br /><br /><br />
+        <footer>
+            <div class="container">
+                <div class="row">
+                    <div class="footer-column">
+                        <h3 class="revert">Python</h3>
+                        <a href="./index.html">Python Homepage</a>
+                        <br /><a href="./Python/python-basics/index.html"
+                            >Python Basics</a
+                        >
+                        <br /><a href="./Python/python-classes/index.html"
+                            >Classes</a
+                        >
+                        <br /><a href="./Python/python-collections/index.html"
+                            >Collections</a
+                        >
+                        <br /><a href="./Python/python-dictionaries/index.html"
+                            >Dictionarries</a
+                        >
+                        <br /><a href="./Python/python-functions/index.html"
+                            >Functions</a
+                        >
+                        <br /><a href="./Python/python-tuples/index.html"
+                            >Tuples</a
+                        >
+                    </div>
+                </div>
+            </div>
+        </footer>
+        <script src="../../nav-menu.js"></script>
     </body>
 </html>
